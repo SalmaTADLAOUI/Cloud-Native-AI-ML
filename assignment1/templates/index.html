@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Breast cancer prediction</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+   </head>
+
+   <body>
+      <div id="wrap">
+      <h1>Breast cancer prediction</h1>
+
+      <section id="furn" class="frame2">
+
+         <div class="login">
+
+            <form action="{{ url_for('predict')}}"method="post">
+            <table class="entryForm">
+
+            <tr>
+            <th>compactness_mean：</th>
+            <td><input type="text" name="compactness_mean" placeholder="compactness_mean" required="required" />
+            </tr>
+
+            <tr>
+            <th>concave points_mean：</th>
+            <td><input type="text" name="concave points_mean" placeholder="concave points_mean" required="required" />
+            </tr>
+
+            <tr>
+            <th>area_worst：</th>
+            <td><input type="text" name=">area_worst" placeholder="area_worst" required="required" />
+            </tr>
+
+            <tr>
+            <th>compactness_worst	：</th>
+            <td><input type="text" name="compactness_worst" placeholder="compactness_worst	" required="required" />
+            </tr>
+
+            <tr>
+            <th>concavity_worst：</th>
+            <td><input type="text" name="oncavity_worst" placeholder="concavity_worst" required="required" />
+            </tr>
+
+            <tr>
+            <th>concave points_worst：</th>
+            <td><input type="text" name=">concave points_worst" placeholder="concave points_worst" required="required" />
+            </tr>
+
+
+
+            </table>
+            <div class="btns">
+            <button type="reset" class="btn btn-clear">Reset</button>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </div>
+            </form>
+
+         </div>
+
+
+      </section>
+
+
+      <br>
+      <br>
+      {{prediction_text}}
+      </div>
+
+   </body>
+</html>
