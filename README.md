@@ -7,4 +7,4 @@ Flask App: This directory includes the code and files for creating an applicatio
 
 <img width="602" alt="image3" src="https://github.com/SalmaTADLAOUI/Cloud-Native-AI-ML/assets/76519142/b7676888-6210-4fe1-8915-409113aa4955">
 <img width="264" alt="image2" src="https://github.com/SalmaTADLAOUI/Cloud-Native-AI-ML/assets/76519142/1edb4c56-a9f6-4fc4-b4b5-ea7790f146f2">
-<img width="263" alt="image1" src="https://github.com/SalmaTADLAOUI/Cloud-Native-AI-ML/assets/76519142/b6d9787c-5fa3-4efe-9b0d-3d9c0d37ed05">
+
