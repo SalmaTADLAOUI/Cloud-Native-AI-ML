@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Furniture Prediction</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+   </head>
+
+   <body>
+      <div id="wrap">
+      <h1>Furniture prediction</h1>
+
+      <!-- Display the description here -->
+      <div class="description">
+         <h2>Description:</h2>
+         <p>
+            'category': {'Bar furniture': 0, 'Beds': 1, 'Bookcases & shelving units': 2, 'Cabinets & cupboards': 3, 'Café furniture': 4, 'Chairs': 5, 'Chests of drawers & drawer units': 6, "Children's furniture": 7, 'Nursery furniture': 8, 'Outdoor furniture': 9, 'Room dividers': 10, 'Sideboards, buffets & console tables': 11, 'Sofas & armchairs': 12, 'TV & media furniture': 13, 'Tables & desks': 14, 'Trolleys': 15, 'Wardrobes': 16}
+         </p>
+         <p>'other_colors': {'No': 0, 'Yes': 1}
+         </p>
+         <p>'sellable_online': {False: 0, True: 1}</p>
+      </div>
+
+      <section id="furn" class="frame2">
+
+         <div class="login">
+
+            <form action="{{ url_for('predict')}}" method="post">
+            <table class="entryForm">
+
+            <tr>
+            <th>category：</th>
+            <td><input type="text" name="category" placeholder="category" required="required" />
+            </tr>
+
+            <tr>
+            <th>sellable_online：</th>
+            <td><input type="text" name="sellable_online" placeholder="sellable_online" required="required" />
+            </tr>
+
+            <tr>
+            <th>other_colors：</th>
+            <td><input type="text" name="other_colors" placeholder="other_colors" required="required" />
+            </tr>
+
+            <tr>
+            <th>depth：</th>
+            <td><input type="text" name="depth" placeholder="depth" required="required" />
+            </tr>
+
+            <tr>
+            <th>height：</th>
+            <td><input type="text" name="height" placeholder="height" required="required" />
+            </tr>
+
+            <tr>
+            <th>width：</th>
+            <td><input type="text" name="width" placeholder="width" required="required" />
+            </tr>
+
+
+
+            </table>
+            <div class="btns">
+            <button type="reset" class="btn btn-clear">Reset</button>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </div>
+            </form>
+
+         </div>
+
+
+      </section>
+
+
+      <br>
+      <br>
+      {{prediction_text}}
+      </div>
+
+   </body>
+</html>
